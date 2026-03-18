@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediCare General Hospital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════════ -->
+<header class="site-header" role="banner">
+  <div class="container header__inner">
+    <a href="#home" class="logo" aria-label="MediCare General Hospital">
+      <span class="logo__cross" aria-hidden="true">✚</span>
+      <span class="logo__text">
+        <span class="logo__name">MediCare</span>
+        <span class="logo__sub">General Hospital</span>
+      </span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true"/>
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="site-nav" role="navigation" aria-label="Main navigation">
+      <ul class="nav__list">
+        <li><a href="#home"     class="nav__link">Home</a></li>
+        <li><a href="#about"    class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#doctors"  class="nav__link">Doctors</a></li>
+        <li><a href="#contact"  class="nav__link">Contact</a></li>
+        <li><a href="#contact"  class="nav__link nav__link--cta">Book Appointment</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO — Full-screen medical team photo background
+     Photo: doctors and nurses in a bright hospital corridor
+══════════════════════════════════════════════════════════ -->
+<section id="home" class="hero" aria-label="Hero banner">
+
+  <!-- Background photo layer -->
+  <div class="hero__bg" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1900&auto=format&fit=crop&q=85"
+      alt=""
+      class="hero__bg-img"
+      loading="eager"
+    />
+    <!-- Left-heavy dark gradient so text on left is legible
+         while photo remains visible on right                -->
+    <div class="hero__overlay"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <!-- Text content -->
+    <div class="hero__content">
+      <p class="hero__eyebrow">Trusted Healthcare Since 1998</p>
+      <h1 class="hero__title">Your Health,<br><em>Our Priority</em></h1>
+      <p class="hero__desc">
+        Compassionate care, cutting-edge technology, and a team of world-class
+        specialists — all under one roof for you and your family.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Book Appointment</a>
+        <a href="#about"   class="btn btn--ghost">Learn More</a>
+      </div>
+      <div class="hero__stats" role="list">
+        <div class="stat" role="listitem">
+          <strong>25+</strong><span>Years of Service</span>
+        </div>
+        <div class="stat__div" aria-hidden="true"></div>
+        <div class="stat" role="listitem">
+          <strong>120+</strong><span>Specialist Doctors</span>
+        </div>
+        <div class="stat__div" aria-hidden="true"></div>
+        <div class="stat" role="listitem">
+          <strong>50k+</strong><span>Happy Patients</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating vitals card (glass morphism) -->
+    <div class="hero__card-wrap" aria-hidden="true">
+      <div class="vitals-card">
+        <div class="vitals-card__header">
+          <span class="vitals-card__dot"></span>
+          Live Patient Monitoring
+        </div>
+        <svg viewBox="0 0 220 56" class="ecg-line" aria-hidden="true">
+          <polyline
+            points="0,28 22,28 32,8 44,50 54,18 64,38 74,28 96,28 108,28 118,6 130,52 140,18 152,38 162,28 184,28 220,28"
+            fill="none" stroke="#4ade80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="vitals-card__row">
+          <span>Heart Rate</span><strong>72 bpm</strong>
+        </div>
+        <div class="vitals-card__row">
+          <span>Blood Pressure</span><strong>120 / 80</strong>
+        </div>
+        <div class="vitals-card__row">
+          <span>O₂ Saturation</span><strong class="ok">98 %</strong>
+        </div>
+        <div class="vitals-card__row">
+          <span>Temperature</span><strong>36.6 °C</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave divider into next section -->
+  <div class="hero__wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8fafc"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT — doctor photo on the left, text on right
+     Photo: two doctors reviewing scans in a bright room
+══════════════════════════════════════════════════════════ -->
+<section id="about" class="section about" aria-labelledby="about-heading">
+  <div class="container">
+
+    <div class="section__hd">
+      <span class="tag">About Us</span>
+      <h2 id="about-heading">Healing with Heart &amp; Science</h2>
+      <p>MediCare General Hospital has been the cornerstone of community healthcare
+         for over two decades — combining medical excellence with genuine human compassion.</p>
+    </div>
+
+    <div class="about__grid">
+
+      <!-- Photo column -->
+      <div class="about__photo-col">
+        <!-- Primary large photo -->
+        <div class="about__photo-main">
+          <img
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&auto=format&fit=crop&q=85"
+            alt="Doctors reviewing patient scans together"
+            loading="lazy"
+          />
+        </div>
+        <!-- Small inset photo -->
+        <div class="about__photo-inset">
+          <img
+            src="https://images.unsplash.com/photo-1530026405186-ed1f139313f3?w=500&auto=format&fit=crop&q=85"
+            alt="Nurse caring for a patient"
+            loading="lazy"
+          />
+          <div class="about__iso-badge">
+            <strong>ISO 9001</strong>
+            <span>Certified</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text column -->
+      <div class="about__text-col">
+        <p class="about__lead">
+          Founded in 1998, MediCare has grown from a modest clinic to a 400-bed
+          multi-speciality hospital equipped with state-of-the-art diagnostic and surgical technology.
+        </p>
+        <div class="mv-cards">
+          <div class="mv-card mv-card--a">
+            <span aria-hidden="true">🎯</span>
+            <h3>Our Mission</h3>
+            <p>To provide accessible, affordable, and high-quality healthcare to every
+               individual with dignity, empathy, and clinical excellence.</p>
+          </div>
+          <div class="mv-card mv-card--b">
+            <span aria-hidden="true">🔭</span>
+            <h3>Our Vision</h3>
+            <p>To be the most trusted and innovative hospital network, setting new
+               benchmarks in patient care and medical research across the region.</p>
+          </div>
+        </div>
+        <ul class="pills" aria-label="Core values">
+          <li>Patient-First Care</li>
+          <li>Evidence-Based Medicine</li>
+          <li>24/7 Availability</li>
+          <li>Continuous Innovation</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     STATS BANNER — full-width photo background
+     Photo: busy hospital hallway with staff walking
+══════════════════════════════════════════════════════════ -->
+<section class="stats-banner" aria-label="Hospital statistics">
+  <!-- Background photo -->
+  <div class="stats-banner__bg" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1600&auto=format&fit=crop&q=80"
+      alt=""
+      loading="lazy"
+    />
+    <div class="stats-banner__overlay"></div>
+  </div>
+  <div class="container stats-banner__inner">
+    <div class="stats-banner__item">
+      <strong>400</strong><span>Hospital Beds</span>
+    </div>
+    <div class="stats-banner__item">
+      <strong>120+</strong><span>Specialist Doctors</span>
+    </div>
+    <div class="stats-banner__item">
+      <strong>18</strong><span>Departments</span>
+    </div>
+    <div class="stats-banner__item">
+      <strong>50k+</strong><span>Patients Served</span>
+    </div>
+    <div class="stats-banner__item">
+      <strong>25 Yrs</strong><span>Of Excellence</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SERVICES — white cards with emoji icons
+══════════════════════════════════════════════════════════ -->
+<section id="services" class="section services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section__hd">
+      <span class="tag">What We Offer</span>
+      <h2 id="services-heading">World-Class Medical Services</h2>
+      <p>From emergency response to specialised surgical procedures, our departments
+         are staffed by experienced professionals and equipped with advanced technology.</p>
+    </div>
+
+    <div class="services__grid">
+      <article class="svc-card">
+        <div class="svc-card__icon">🚑</div>
+        <h3>Emergency Care</h3>
+        <p>Round-the-clock emergency services with rapid triage and a dedicated trauma team available 24/7/365.</p>
+        <a href="#contact" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__icon">🔬</div>
+        <h3>Surgery</h3>
+        <p>Minimally invasive and open surgeries across all specialties, performed in state-of-the-art OTs.</p>
+        <a href="#contact" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__icon">👶</div>
+        <h3>Paediatrics</h3>
+        <p>Dedicated children's ward with paediatric specialists, neonatal ICU, and child-friendly facilities.</p>
+        <a href="#contact" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__icon">🧪</div>
+        <h3>Laboratory</h3>
+        <p>Fully accredited diagnostic laboratory offering 500+ tests with same-day result availability.</p>
+        <a href="#contact" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__icon">❤️</div>
+        <h3>Cardiology</h3>
+        <p>Advanced cardiac imaging, interventional cardiology, and a dedicated cardiac catheterisation lab.</p>
+        <a href="#contact" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__icon">🩻</div>
+        <h3>Radiology</h3>
+        <p>3T MRI, 128-slice CT, digital X-ray, and interventional radiology under one comprehensive suite.</p>
+        <a href="#contact" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__icon">💊</div>
+        <h3>Pharmacy</h3>
+        <p>In-hospital pharmacy stocking 3,000+ medicines with clinical pharmacist consultation services.</p>
+        <a href="#contact" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__icon">🏃</div>
+        <h3>Physiotherapy</h3>
+        <p>Comprehensive rehabilitation and physiotherapy programmes for post-surgical and injury recovery.</p>
+        <a href="#contact" class="svc-link">Learn more →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     TESTIMONIAL BANNER — photo background of caring nurse
+     Photo: nurse talking warmly to a smiling patient
+══════════════════════════════════════════════════════════ -->
+<section class="testimonial-band" aria-label="Patient testimonial">
+  <div class="testimonial-band__bg" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1600&auto=format&fit=crop&q=80"
+      alt=""
+      loading="lazy"
+    />
+    <div class="testimonial-band__overlay"></div>
+  </div>
+  <div class="container testimonial-band__inner">
+    <blockquote>
+      <p class="testimonial-band__quote">
+        "The care and compassion I received at MediCare was extraordinary.
+         Every single member of staff treated me like family."
+      </p>
+      <footer>
+        <strong>— Sarah Kamau</strong>
+        <span>Cardiac Surgery Patient, 2024</span>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     DOCTORS — real photo cards
+══════════════════════════════════════════════════════════ -->
+<section id="doctors" class="section doctors" aria-labelledby="doctors-heading">
+
+  <!-- Subtle section background: faint hospital corridor photo -->
+  <div class="doctors__scene-bg" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1626315869436-d6781ba69d6e?w=1600&auto=format&fit=crop&q=60"
+      alt=""
+      loading="lazy"
+    />
+    <div class="doctors__scene-overlay"></div>
+  </div>
+
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="section__hd section__hd--light">
+      <span class="tag tag--light">Meet Our Team</span>
+      <h2 style="color:#fff;">Expert Physicians You Can Trust</h2>
+      <p style="color:rgba(255,255,255,.75);">Our team of over 120 specialists bring decades of combined experience
+         and a shared commitment to exceptional patient care.</p>
+    </div>
+
+    <div class="doctors__grid">
+
+      <article class="doc-card">
+        <div class="doc-card__img">
+          <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=85"
+            alt="Dr. Amara Osei, Cardiologist"
+            loading="lazy"
+          />
+          <div class="doc-card__overlay">
+            <ul class="doc-card__socials">
+              <li><a href="#" aria-label="LinkedIn">in</a></li>
+              <li><a href="#" aria-label="Email">✉</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="doc-card__info">
+          <h3>Dr. Amara Osei</h3>
+          <p class="doc-card__spec">Cardiologist</p>
+          <p class="doc-card__exp">18 years experience</p>
+        </div>
+      </article>
+
+      <article class="doc-card">
+        <div class="doc-card__img">
+          <img
+            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&auto=format&fit=crop&q=85"
+            alt="Dr. Priya Nair, Paediatric Surgeon"
+            loading="lazy"
+          />
+          <div class="doc-card__overlay">
+            <ul class="doc-card__socials">
+              <li><a href="#" aria-label="LinkedIn">in</a></li>
+              <li><a href="#" aria-label="Email">✉</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="doc-card__info">
+          <h3>Dr. Priya Nair</h3>
+          <p class="doc-card__spec">Paediatric Surgeon</p>
+          <p class="doc-card__exp">14 years experience</p>
+        </div>
+      </article>
+
+      <article class="doc-card">
+        <div class="doc-card__img">
+          <img
+            src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&auto=format&fit=crop&q=85"
+            alt="Dr. Samuel Mwangi, Neurosurgeon"
+            loading="lazy"
+          />
+          <div class="doc-card__overlay">
+            <ul class="doc-card__socials">
+              <li><a href="#" aria-label="LinkedIn">in</a></li>
+              <li><a href="#" aria-label="Email">✉</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="doc-card__info">
+          <h3>Dr. Samuel Mwangi</h3>
+          <p class="doc-card__spec">Neurosurgeon</p>
+          <p class="doc-card__exp">22 years experience</p>
+        </div>
+      </article>
+
+      <article class="doc-card">
+        <div class="doc-card__img">
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&auto=format&fit=crop&q=85"
+            alt="Dr. Mei-Ling Chen, Oncologist"
+            loading="lazy"
+          />
+          <div class="doc-card__overlay">
+            <ul class="doc-card__socials">
+              <li><a href="#" aria-label="LinkedIn">in</a></li>
+              <li><a href="#" aria-label="Email">✉</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="doc-card__info">
+          <h3>Dr. Mei-Ling Chen</h3>
+          <p class="doc-card__spec">Oncologist</p>
+          <p class="doc-card__exp">16 years experience</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT — background: nurses at station
+     Photo: medical reception / nursing station
+══════════════════════════════════════════════════════════ -->
+<section id="contact" class="section contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section__hd">
+      <span class="tag">Get In Touch</span>
+      <h2 id="contact-heading">Book an Appointment</h2>
+      <p>Reach out to us today. Our care coordinators are available 24 hours a day,
+         7 days a week to assist you.</p>
+    </div>
+
+    <div class="contact__grid">
+
+      <!-- Info panel — has background photo -->
+      <div class="contact__info-panel">
+        <div class="contact__info-bg" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=900&auto=format&fit=crop&q=80"
+            alt=""
+            loading="lazy"
+          />
+          <div class="contact__info-overlay"></div>
+        </div>
+        <div class="contact__info-content">
+          <h3>Contact Information</h3>
+          <div class="cinfo">
+            <span aria-hidden="true">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+254200000000">+254 200 000 000</a>
+              <small>Emergency: +254 200 911 911</small>
+            </div>
+          </div>
+          <div class="cinfo">
+            <span aria-hidden="true">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@medicare-hospital.co.ke">info@medicare-hospital.co.ke</a>
+              <small>We reply within 24 hours</small>
+            </div>
+          </div>
+          <div class="cinfo">
+            <span aria-hidden="true">📍</span>
+            <div>
+              <strong>Address</strong>
+              <span>14 Health Avenue, Westlands</span>
+              <small>Nairobi, Kenya</small>
+            </div>
+          </div>
+          <div class="cinfo">
+            <span aria-hidden="true">🕐</span>
+            <div>
+              <strong>Hours</strong>
+              <span>OPD: Mon–Sat 8 AM – 8 PM</span>
+              <small>Emergency: 24 / 7 / 365</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form panel -->
+      <div class="contact__form-panel">
+        <form class="appt-form" action="#" method="post" novalidate>
+          <div class="appt-form__row appt-form__row--2">
+            <div class="appt-form__group">
+              <label for="f-name">Full Name</label>
+              <input type="text"   id="f-name"  name="name"        placeholder="John Smith" required/>
+            </div>
+            <div class="appt-form__group">
+              <label for="f-email">Email</label>
+              <input type="email"  id="f-email" name="email"       placeholder="you@example.com" required/>
+            </div>
+          </div>
+          <div class="appt-form__row appt-form__row--2">
+            <div class="appt-form__group">
+              <label for="f-phone">Phone</label>
+              <input type="tel"    id="f-phone" name="phone"       placeholder="+254 700 000 000"/>
+            </div>
+            <div class="appt-form__group">
+              <label for="f-dept">Department</label>
+              <div class="appt-form__sel-wrap">
+                <select id="f-dept" name="department">
+                  <option value="">— Select —</option>
+                  <option>Cardiology</option>
+                  <option>Paediatrics</option>
+                  <option>Surgery</option>
+                  <option>Neurology</option>
+                  <option>Oncology</option>
+                  <option>General</option>
+                </select>
+                <span aria-hidden="true">▾</span>
+              </div>
+            </div>
+          </div>
+          <div class="appt-form__row">
+            <div class="appt-form__group">
+              <label for="f-date">Preferred Date</label>
+              <input type="date" id="f-date" name="date"/>
+            </div>
+          </div>
+          <div class="appt-form__row">
+            <div class="appt-form__group">
+              <label for="f-msg">Message / Symptoms</label>
+              <textarea id="f-msg" name="message" rows="4"
+                placeholder="Describe your symptoms or reason for visit..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Send Appointment Request
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#home" class="logo" aria-label="MediCare General Hospital">
+        <span class="logo__cross" aria-hidden="true">✚</span>
+        <span class="logo__text">
+          <span class="logo__name">MediCare</span>
+          <span class="logo__sub">General Hospital</span>
+        </span>
+      </a>
+      <p>Your health is our greatest achievement. Trusted care since 1998.</p>
+      <ul class="socials" aria-label="Social media">
+        <li><a href="#" aria-label="Facebook">f</a></li>
+        <li><a href="#" aria-label="Twitter">𝕏</a></li>
+        <li><a href="#" aria-label="Instagram">◻</a></li>
+        <li><a href="#" aria-label="LinkedIn">in</a></li>
+      </ul>
+    </div>
+    <nav aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctors">Our Doctors</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Services">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Emergency Care</a></li>
+        <li><a href="#services">Surgery</a></li>
+        <li><a href="#services">Paediatrics</a></li>
+        <li><a href="#services">Laboratory</a></li>
+        <li><a href="#services">Cardiology</a></li>
+      </ul>
+    </nav>
+    <address>
+      <h4>Contact Us</h4>
+      <ul>
+        <li>📞 <a href="tel:+254200000000">+254 200 000 000</a></li>
+        <li>✉ <a href="mailto:info@medicare-hospital.co.ke">info@medicare-hospital.co.ke</a></li>
+        <li>📍 14 Health Avenue, Westlands, Nairobi</li>
+        <li>🚨 Emergency: +254 200 911 911</li>
+      </ul>
+    </address>
+  </div>
+  <div class="footer__bar">
+    <div class="container footer__bar-inner">
+      <p>© 2025 MediCare General Hospital. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
